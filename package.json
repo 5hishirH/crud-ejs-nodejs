@@ -4,7 +4,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "npx nodemon ./src/index.ts",
-    "prestart": "npx tsc",
+    "build": "rm -rf ./dist/views && npx tsc && cp -r ./src/views ./dist",
     "start": "npx node ./dist/index.js"
   },
   "keywords": [
