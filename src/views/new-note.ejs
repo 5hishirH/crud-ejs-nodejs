@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NoteVerse</title>
+  </head>
+  <body>
+    <p>
+      <form action="/api/v1/note" method="post">
+        <p>
+            <input 
+                type="text"
+                placeholder="Note Title"
+                name="title"
+            />
+        </p>
+        <p>            
+            <textarea 
+                type="text"
+                placeholder="Note description"
+                name="description"
+            ></textarea>
+        </p>
+        <button type="submit">Create</button>
+      </form>
+    </p>
+  </body>
+</html>

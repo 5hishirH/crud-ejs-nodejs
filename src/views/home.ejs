@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NoteVerse</title>
+  </head>
+  <body>
+    <a href="/note/new">New note</a>
+    <% if (notes.length > 0) { %>
+    <p>
+      <ul>
+        <% notes.forEach(note => { %>
+          <li>
+            <strong><%= note.title %></strong>
+            <p><%= note.description %></p>
+            <p>
+              <a href="/note/<%= note._id %>">
+                <button type="button">Update</button>
+              </a>
+              <form action="/api/v1/note/delete/<%= note._id %>" method="post">
+                <button type="submit">Delete</button>
+              </form>
+            </p>
+          </li>
+        <% }) %>
+      </ul>
+    </p>
+    <% } else { %>
+      <p>No notes yets! create some.</p>
+    <% } %>
+  </body>
+</html>

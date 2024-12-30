@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NoteVerse</title>
+  </head>
+  <body>
+    <a href="/">Home</a>
+      <form action="/api/v1/note/update/<%= note._id %>" method="post">
+        <p>
+          <input
+            type="text"
+            placeholder="Note Title"
+            name="title"
+            value="<%= note.title %>"
+          />
+        </p>
+        <p>
+          <textarea
+            type="text"
+            placeholder="Note description"
+            name="description"
+          ><%= note.description %></textarea>
+        </p>
+        <button type="submit">Update</button>
+      </form>
+    
+  </body>
+</html>
